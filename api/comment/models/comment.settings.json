@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "comments",
+  "info": {
+    "name": "Comment"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "publish_date": {
+      "type": "datetime",
+      "required": true
+    },
+    "body": {
+      "type": "richtext",
+      "required": true,
+      "minLength": 1
+    },
+    "like": {
+      "model": "likes"
+    },
+    "restaurant": {
+      "via": "comments",
+      "model": "restaurant"
+    }
+  }
+}

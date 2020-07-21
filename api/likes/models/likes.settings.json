@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "likes",
+  "info": {
+    "name": "Likes"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "like_count": {
+      "type": "biginteger",
+      "default": "0",
+      "required": true
+    }
+  }
+}
